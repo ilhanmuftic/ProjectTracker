@@ -15,7 +15,7 @@ const ProjectDetailsScreen = ({ route }) => {
     if (isTimerRunning) {
       setIsTimerRunning(false);
 
-      const totalElapsedTimeInHours = ((Date.now() - startTime)/10 / 60 / 60); // Convert seconds to hours
+      const totalElapsedTimeInHours = ((Date.now() - startTime)/1000 / 60 / 60); // Convert seconds to hours
       const newTotalHoursSpent = hoursSpent + totalElapsedTimeInHours;
 
       setHoursSpent(newTotalHoursSpent); // Update total hours spent
